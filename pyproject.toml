@@ -1,0 +1,42 @@
+[project]
+name = "insurance-rag-assistant"
+version = "0.1.0"
+description = "preparing for interview"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+insurance-rag-assistant = "insurance_rag_assistant:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle: style errors
+    "F",    # pyflakes: unused imports, undefined names
+    "I",    # isort: import order
+    "B",    # bugbear: likely bugs
+    "UP",   # pyupgrade: modern Python syntax
+    "SIM",  # simplify: simpler code
+]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
