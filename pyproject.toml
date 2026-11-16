@@ -1,7 +1,7 @@
 [project]
 name = "insurance-rag-assistant"
 version = "0.1.0"
-description = "preparing for interview"
+description = "Enterprise RAG assistant for insurance documents with citations, access control and evals"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []

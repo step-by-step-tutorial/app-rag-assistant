@@ -1,31 +1,24 @@
 # Insurance RAG Assistant
 
-## Installation
+## Guide for project setup at first
 
-```shell
+```text
+Install python
+Install pip
 pip install uv
+uv init --package
+uv add --dev ruff mypy pytest pre-commit
+Add pre-commit-config.yaml file
+uv run pre-commit autoupdate
+uv run pre-commit install
+uv run pre-commit run --all-files
 ```
 
 ## Setup
 
 ```shell
-uv init --package
-```
-
-```shell
-uv add --dev ruff mypy pytest pre-commit
-```
-
-```shell
-uv run pre-commit autoupdate
-```
-
-```shell
+uv sync
 uv run pre-commit install
-```
-
-```shell
-uv run pre-commit run --all-files
 ```
 
 ## Test
