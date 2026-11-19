@@ -1,13 +1,17 @@
 [project]
-name = "insurance-rag-assistant"
+name = "app-rag-assistant"
 version = "0.1.0"
 description = "Enterprise RAG assistant for insurance documents with citations, access control and evals"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi>=0.165.0",
+    "pydantic-settings>=2.16.3",
+    "uvicorn[standard]>=0.54.0",
+]
 
 [project.scripts]
-insurance-rag-assistant = "insurance_rag_assistant:main"
+app-rag-assistant = "app_rag_assistant:main"
 
 [build-system]
 requires = ["uv_build>=0.13.8,<0.14.0"]
@@ -15,6 +19,7 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "httpx>=0.28.1",
     "mypy>=2.4.1",
     "pre-commit>=4.7.0",
     "pytest>=9.2.0",

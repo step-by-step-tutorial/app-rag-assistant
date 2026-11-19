@@ -1,6 +1,6 @@
 import pytest
 
-from insurance_rag_assistant.chunking import chunk_text
+from app_rag_assistant.chunking import chunk_text
 
 
 def test_splits_text_into_equal_chunks() -> None:
